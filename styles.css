@@ -1,7 +1,19 @@
+/* Estilos generales */
+body {
+    background-color: #212121 !important; /* Negro más claro que el navbar */
+    color: #ffffff !important; /* Color del texto en blanco */
+    font-family: "Source Code Pro", monospace !important;
+    font-size: 20px !important;
+}
+
+section {
+    padding: 40px 0; /* Espaciado interno */
+}
+
+/* Navbar */
 .navbar {
     background-color: #212121 !important; 
     border-bottom: 6px solid #ffc109; 
-    font-family: "Source Code Pro", monospace;
 }
 
 .navbar-brand {
@@ -18,27 +30,58 @@
     color: #212121 !important; 
 }
 
-body {
-    background-color: #212121 !important; /* Negro más claro que el navbar */
-    color: #ffffff !important; /* Color del texto en blanco */
-    font-family: "Source Code Pro", monospace !important;
-    font-size: 20px !important;
+/* Tarjetas de proyectos */
+.project-card {
+    background-color: #333 !important; /* Fondo oscuro para las tarjetas */
+    color: #ffffff !important;
+    border: none;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-section {
-    padding: 40px 0; /* Espaciado interno */
-}
-.rounded-circle {
-    object-fit: cover; /* Asegura que la imagen se recorte adecuadamente */
-    margin-left: auto; /* Mueve la imagen hacia la derecha */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Sombra para la imagen */
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(255, 193, 9, 0.5); /* Sombra amarilla al pasar el cursor */
 }
 
+.project-card .card-title {
+    color: #ffc109; /* Título en color amarillo */
+}
+
+.project-card .btn-outline-light {
+    border-color: #ffc109;
+    color: #ffc109;
+}
+
+.project-card .btn-outline-light:hover {
+    background-color: #ffc109;
+    color: #212121; /* Cambiar a fondo amarillo y texto oscuro */
+}
+
+.project-card.small-card {
+    width: 70%; /* Ajusta el tamaño de la tarjeta */
+    margin: 0 auto; /* Centra la tarjeta dentro de la columna */
+    font-size: 1rem; /* Reduce el tamaño del texto */
+}
+
+.project-card .card-img-top {
+    height: 200px; /* Ajusta la altura de la imagen */
+    object-fit: cover; /* Asegura que la imagen se ajuste sin distorsionarse */
+}
+
+/* Estilos para iconos */
+.card-text i {
+    color: #ffc109; /* Ajusta el color al tema amarillo */
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+/* Resaltar */
 .highlight {
     color: #ffc109; /* Color amarillo para "Juan Pablo" */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra para el texto "Juan Pablo" */
 }
 
+/* Iconos en la presentación */
 .text-center .bi {
     color: #ffffff; /* Color blanco para los iconos */
     transition: transform 0.3s;
@@ -46,4 +89,9 @@ section {
 
 .text-center .bi:hover {
     transform: scale(1.2); /* Aumentar el tamaño del icono al pasar el cursor */
+}
+
+/* Sombra para la imagen del perfil */
+.rounded-circle {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Sombra para la imagen */
 }
